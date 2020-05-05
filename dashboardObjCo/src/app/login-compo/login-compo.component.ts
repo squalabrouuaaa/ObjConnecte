@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-login-compo',
@@ -10,7 +9,7 @@ export class LoginCompoComponent implements OnInit {
   username: string;
   password: string;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(/*private httpClient: HttpClient*/) {}
 
   ngOnInit(): void {}
   onlogin() {
