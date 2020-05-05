@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "..\\..\\BTS+MRBOT\\MrBot\\api\\dashbot"
 		}
 	],
 	"settings": {}

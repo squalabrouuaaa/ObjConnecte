@@ -1,18 +1,18 @@
 <div class="container">
     <div class="contain">
         <h2>Connexion</h2>
-        <div class="form">
+        <form #log="ngForm" (ngSubmit)="onSubmit(log)" class="form">
             <div class="form-group">
                 <label class="Username" for="Username">Nom d'utilisateur</label>
-                <input [(ngModel)]="username" class="form-control" type="text" id="Username" ngModel>
+                <input class="form-control" type="text" name="username" ngModel required #username="ngModel" >
             </div>
             <div class="form-group">
                 <label for="pass">Mot de passe</label>
-                <input [(ngModel)]="password" class="form-control" type="password" id="pass" ngModel>
+                <input class="form-control" type="password" name="password" ngModel required #password="ngModel" >
             </div>
             <div class="button">
-                <button type="submit"> Se Connecter </button>
+                <button class="btn btn-success" type="submit"> Se Connecter </button>
             </div>
-        </div>
+        </form>
     </div>
 </div>

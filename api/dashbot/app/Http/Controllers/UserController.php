@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -24,18 +23,16 @@ class UserController extends Controller
         $util = $request->all();
         $db = app('db')->connection('mysql');
 
-        $res = $db->select("SELECT username, password FROM user WHERE username = '".$util['username']."' LIMIT 1;");
+        $res = $db->select("SELECT id, username, mdp FROM user WHERE username = '".$util['username']."' LIMIT 1;");
 
         if(isset($res[0])){
-            if (($res[0]["password"] == $util['password'])) {
+            if (($res[0]["mdp"] == $util['password'])) {
                 $date = time() + 3600;
                 $token = bin2hex(random_bytes(16));
-                $db->update("UPDATE user set token = '".$token."',token_valid ='".$date."' WHERE username = '".$util['username']."' LIMIT 1;");
+                $db->update("UPDATE user set token = '".$token."',token_valid ='".$date."' WHERE id = '".$res[0]['id']."' LIMIT 1;");
                 return response()->json(
                     array(
                         'token' =>  $token,
-                        "lastname" => $res[0]["lastname"],
-                        "firstname" => $res[0]["firstname"]
                     ), 200
                 );
             }else{
