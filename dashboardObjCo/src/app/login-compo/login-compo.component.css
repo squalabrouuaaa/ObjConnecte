@@ -14,6 +14,7 @@
 
 .contain {
   background-color: rgb(152, 221, 247, 0.3);
+  box-shadow: 5px 5px 5px grey;
   height: 400px;
   width: 360px;
   padding: 80px 40px;
