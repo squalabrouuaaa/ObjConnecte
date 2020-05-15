@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { LoginCompoComponent } from './login-compo/login-compo.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardCompoComponent } from './dashboard-compo/dashboard-compo.component';
+import { DetailsCompoComponent } from './details-compo/details-compo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginCompoComponent,
-    DashboardCompoComponent
+    DashboardCompoComponent,
+    DetailsCompoComponent
   ],
   imports: [
     BrowserModule,

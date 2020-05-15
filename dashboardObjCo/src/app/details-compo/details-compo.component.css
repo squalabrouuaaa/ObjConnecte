@@ -1,0 +1,38 @@
+.container {
+  margin: 40px;
+  color: white;
+  justify-content: center;
+  background-color: rgb(152, 221, 247, 0.3);
+  box-shadow: 5px 5px 5px grey;
+  width: 1000px;
+  padding: 20px 20px;
+}
+
+.contain {
+  justify-content: center;
+}
+.block {
+  margin: 40px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.item {
+  margin: 20px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.title-block {
+  font-size: 25px;
+}
+
+.graph {
+  margin-top: 20px;
+  height: 300px;
+}
