@@ -16,10 +16,10 @@ export class LoginCompoComponent implements OnInit {
   constructor(private httpClient: HttpClient, private router: Router) {
   }
 
-  ngOnInit() {
-    if (localStorage.getItem("token")) {
-     // this.router.navigate(['personalize']);
-    }
+	ngOnInit() {
+    	if (localStorage.getItem("token")) {
+    		this.router.navigate(['dashboard']);
+    	}
   }
 
   onSubmit(form: NgForm){
@@ -43,7 +43,7 @@ export class LoginCompoComponent implements OnInit {
 
   			console.log('POST RESPONSE'+JSON.stringify(response));
   			localStorage.setItem('token', res.token);
-  			//	this.router.navigate(['Personalize']);
+  			this.router.navigate(['dashboard']);
   		},
   		(error) => {
   			console.log('POST ERROR'+JSON.stringify(error));
